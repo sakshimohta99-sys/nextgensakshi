@@ -9,9 +9,17 @@ const Index = () => {
         <img
           src={nextgenLogo}
           alt="NextGen Logo"
-          className="mb-8 w-48 h-48 object-contain animate-float drop-shadow-2xl"
+          className="mb-6 w-40 h-40 object-contain animate-float"
+          style={{ filter: "drop-shadow(0 0 40px rgba(120, 80, 220, 0.5))" }}
         />
-        <p className="max-w-xl text-center text-lg md:text-xl font-medium tracking-wide text-hero-tagline drop-shadow-lg">
+        <p
+          className="max-w-lg text-center text-base md:text-lg font-light tracking-widest uppercase"
+          style={{
+            color: "rgba(180, 160, 220, 0.55)",
+            textShadow: "0 0 20px rgba(120, 80, 220, 0.3)",
+            letterSpacing: "0.25em",
+          }}
+        >
           The one thing more dangerous than AI is someone using it
         </p>
       </div>
