@@ -19,7 +19,6 @@ const Index = () => {
           alt="NextGen Logo"
           className="mb-6 w-40 h-40 object-contain"
           style={{ filter: "drop-shadow(0 0 40px rgba(120, 80, 220, 0.5))" }}
-          onClick={() => setShowTagline(true)}
         />
         <p
           className={`max-w-lg text-center text-lg md:text-xl font-bold tracking-widest uppercase transition-all duration-700 ease-out ${
