@@ -31,7 +31,7 @@ const Index = () => {
           />
 
           <p
-            className={`max-w-lg text-center text-base md:text-lg font-light tracking-widest uppercase transition-all duration-700 ease-out font-montserrat ${
+            className={`max-w-lg text-center text-base md:text-lg font-bold tracking-widest uppercase transition-all duration-700 ease-out font-montserrat ${
               showTagline
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-6 pointer-events-none"
@@ -96,7 +96,7 @@ const Index = () => {
           </div>
 
           {/* Headline */}
-          <h1 className="mb-8 text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight font-montserrat text-foreground">
+          <h1 className="mb-8 text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight whitespace-nowrap font-montserrat text-foreground">
             Make Your Company AI-First
           </h1>
 
