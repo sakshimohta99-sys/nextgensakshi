@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import AnimatedShaderBackground from "@/components/ui/animated-shader-background";
 import nextgenLogo from "@/assets/nextgen-logo.png";
 
