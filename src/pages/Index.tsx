@@ -1,11 +1,19 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import AnimatedShaderBackground from "@/components/ui/animated-shader-background";
+import nextgenLogo from "@/assets/nextgen-logo.png";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="relative min-h-screen overflow-hidden">
+      <AnimatedShaderBackground />
+      <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4">
+        <img
+          src={nextgenLogo}
+          alt="NextGen Logo"
+          className="mb-8 w-48 h-48 object-contain animate-float drop-shadow-2xl"
+        />
+        <p className="max-w-xl text-center text-lg md:text-xl font-medium tracking-wide text-hero-tagline drop-shadow-lg">
+          The one thing more dangerous than AI is someone using it
+        </p>
       </div>
     </div>
   );
