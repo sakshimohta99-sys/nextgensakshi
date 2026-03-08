@@ -137,14 +137,16 @@ const Index = () => {
       <section
         id="courses"
         className="relative min-h-screen overflow-hidden"
-        style={{ background: "#0A0A0A" }}
+        style={{
+          background: "linear-gradient(180deg, #EDE5FF 0%, #F5F0FF 15%, #FFFFFF 40%, #FFFFFF 100%)",
+        }}
       >
-        {/* Dark Nav */}
-        <nav className="sticky top-0 z-30 flex items-center justify-between px-6 md:px-12 py-4 backdrop-blur-sm bg-[#0A0A0A]/80">
+        {/* Light Nav */}
+        <nav className="sticky top-0 z-30 flex items-center justify-between px-6 md:px-12 py-4 backdrop-blur-sm bg-white/70">
           <img
             src={nextgenLogo}
             alt="NextGen Logo"
-            className="h-10 w-10 object-contain brightness-0 invert"
+            className="h-10 w-10 object-contain"
           />
           <a
             href="mailto:sakshi.mohta99@gmail.com"
@@ -157,7 +159,7 @@ const Index = () => {
 
         {/* Courses content */}
         <div className="flex min-h-[calc(100vh-72px)] flex-col items-center justify-center px-6 py-16">
-          <h2 className="mb-16 text-3xl md:text-5xl font-bold text-white font-montserrat text-center">
+          <h2 className="mb-16 text-3xl md:text-5xl font-bold text-foreground font-montserrat text-center">
             Our Courses
           </h2>
 
@@ -183,7 +185,7 @@ const Index = () => {
             href="https://calendly.com/sakshi-mohta99"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center rounded-full bg-primary px-8 py-4 text-base md:text-lg font-semibold text-primary-foreground transition-all hover:bg-primary/85 font-montserrat"
+            className="group inline-flex items-center rounded-full bg-primary px-8 py-4 text-base md:text-lg font-semibold text-primary-foreground transition-all hover:bg-primary/85 font-montserrat"
           >
             Book Your Meeting
             <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
