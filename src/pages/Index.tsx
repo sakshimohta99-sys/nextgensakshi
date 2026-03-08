@@ -5,8 +5,13 @@ import nextgenLogo from "@/assets/nextgen-logo.png";
 const Index = () => {
   const [showTagline, setShowTagline] = useState(false);
 
+  useEffect(() => {
+    const timer = setTimeout(() => setShowTagline(true), 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="relative min-h-screen overflow-hidden cursor-pointer" onClick={() => setShowTagline(true)}>
+    <div className="relative min-h-screen overflow-hidden">
       <AnimatedShaderBackground />
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4">
         <img
