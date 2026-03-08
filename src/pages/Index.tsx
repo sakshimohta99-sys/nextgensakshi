@@ -31,7 +31,7 @@ const Index = () => {
           />
 
           <p
-            className={`max-w-lg text-center text-base md:text-lg font-light tracking-widest uppercase transition-all duration-700 ease-out font-montserrat ${
+            className={`max-w-lg text-center text-base md:text-lg font-bold tracking-widest uppercase transition-all duration-700 ease-out font-montserrat ${
               showTagline
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-6 pointer-events-none"
