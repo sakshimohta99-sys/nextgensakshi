@@ -13,11 +13,11 @@ const Index = () => {
           style={{ filter: "drop-shadow(0 0 40px rgba(120, 80, 220, 0.5))" }}
         />
         <p
-          className="max-w-lg text-center text-base md:text-lg font-light tracking-widest uppercase"
+          className="max-w-lg text-center text-lg md:text-xl font-bold tracking-widest uppercase"
           style={{
-            color: "rgba(180, 160, 220, 0.55)",
-            textShadow: "0 0 20px rgba(120, 80, 220, 0.3)",
-            letterSpacing: "0.25em",
+            color: "#000000",
+            textShadow: "0 0 30px rgba(0, 0, 0, 0.6)",
+            letterSpacing: "0.2em",
           }}
         >
           The one thing more dangerous than AI is someone using it
