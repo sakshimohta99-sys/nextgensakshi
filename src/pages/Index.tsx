@@ -3,6 +3,24 @@ import AnimatedShaderBackground from "@/components/ui/animated-shader-background
 import nextgenLogo from "@/assets/nextgen-logo.png";
 import { ChevronDown, Rocket, Mail } from "lucide-react";
 
+const courses = [
+  {
+    title: "Brand Yourself with AI",
+    tagline:
+      "Build a powerful personal brand using AI tools — from content to visibility.",
+  },
+  {
+    title: "Train Your Team in AI",
+    tagline:
+      "Role-based AI training to make every employee faster and smarter.",
+  },
+  {
+    title: "Work Smarter with AI",
+    tagline:
+      "Automate the mundane. Focus on what actually matters.",
+  },
+];
+
 const Index = () => {
   const [showTagline, setShowTagline] = useState(false);
   const [showChevron, setShowChevron] = useState(false);
@@ -108,6 +126,64 @@ const Index = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center rounded-full border-2 border-foreground bg-foreground px-8 py-4 text-base md:text-lg font-semibold text-background transition-all hover:bg-transparent hover:text-foreground font-montserrat"
+          >
+            Book Your Meeting
+            <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
+          </a>
+        </div>
+      </section>
+
+      {/* ===== PAGE 3: OUR COURSES ===== */}
+      <section
+        id="courses"
+        className="relative min-h-screen overflow-hidden"
+        style={{ background: "#0A0A0A" }}
+      >
+        {/* Dark Nav */}
+        <nav className="sticky top-0 z-30 flex items-center justify-between px-6 md:px-12 py-4 backdrop-blur-sm bg-[#0A0A0A]/80">
+          <img
+            src={nextgenLogo}
+            alt="NextGen Logo"
+            className="h-10 w-10 object-contain brightness-0 invert"
+          />
+          <a
+            href="mailto:sakshi.mohta99@gmail.com"
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/85 font-montserrat"
+          >
+            <Mail size={16} />
+            Get in Touch
+          </a>
+        </nav>
+
+        {/* Courses content */}
+        <div className="flex min-h-[calc(100vh-72px)] flex-col items-center justify-center px-6 py-16">
+          <h2 className="mb-16 text-3xl md:text-5xl font-bold text-white font-montserrat text-center">
+            Our Courses
+          </h2>
+
+          {/* Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl w-full mb-16">
+            {courses.map((course, i) => (
+              <div key={i} className="glow-card-wrapper group">
+                <div className="glow-card-border" />
+                <div className="glow-card-content">
+                  <h3 className="text-xl md:text-2xl font-semibold text-primary font-montserrat mb-4">
+                    {course.title}
+                  </h3>
+                  <p className="text-sm md:text-base font-normal font-montserrat" style={{ color: "#D1D5DB" }}>
+                    {course.tagline}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA */}
+          <a
+            href="https://calendly.com/sakshi-mohta99"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center rounded-full bg-primary px-8 py-4 text-base md:text-lg font-semibold text-primary-foreground transition-all hover:bg-primary/85 font-montserrat"
           >
             Book Your Meeting
             <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
