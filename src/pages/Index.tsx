@@ -37,7 +37,7 @@ const Index = () => {
                 : "opacity-0 translate-y-6 pointer-events-none"
             }`}
             style={{
-              color: "#FFFFFF",
+              color: "#000000",
               textShadow: "0 0 30px rgba(0, 0, 0, 0.6)",
               letterSpacing: "0.18em",
             }}
