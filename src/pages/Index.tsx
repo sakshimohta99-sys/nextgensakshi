@@ -6,7 +6,7 @@ const Index = () => {
   const [showTagline, setShowTagline] = useState(false);
 
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div className="relative min-h-screen overflow-hidden cursor-pointer" onClick={() => setShowTagline(true)}>
       <AnimatedShaderBackground />
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4">
         <img
