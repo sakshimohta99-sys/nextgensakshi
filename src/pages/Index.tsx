@@ -97,7 +97,7 @@ const Index = () => {
 
           {/* Headline */}
           <h1 className="mb-8 text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight whitespace-nowrap font-montserrat text-foreground">
-            Make Your Company AI-First
+            Make Your Company/Organization AI-First
           </h1>
 
           {/* CTA Button */}
