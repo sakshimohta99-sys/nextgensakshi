@@ -12,7 +12,7 @@ const Index = () => {
         <img
           src={nextgenLogo}
           alt="NextGen Logo"
-          className="mb-6 w-40 h-40 object-contain animate-float cursor-pointer transition-transform duration-300 hover:scale-110"
+          className="mb-6 w-40 h-40 object-contain animate-float"
           style={{ filter: "drop-shadow(0 0 40px rgba(120, 80, 220, 0.5))" }}
           onClick={() => setShowTagline(true)}
         />
