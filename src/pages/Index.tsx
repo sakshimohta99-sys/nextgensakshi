@@ -160,7 +160,7 @@ const Index = () => {
         {/* Courses content */}
         <div className="flex min-h-[calc(100vh-72px)] flex-col items-center justify-center px-6 py-16">
           <h2 className="mb-16 text-3xl md:text-5xl font-bold text-foreground font-montserrat text-center">
-            Our Courses
+            Our Services
           </h2>
 
           {/* Cards */}
