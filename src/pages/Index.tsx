@@ -80,15 +80,14 @@ const Index = () => {
       <section
         id="cta"
         className="relative min-h-screen overflow-hidden"
-        style={{ background: "#FAFAFA" }}
       >
-        {/* Faded shader background */}
-        <div className="absolute inset-0 opacity-[0.12] pointer-events-none">
+        {/* Full shader background (same as Page 1) */}
+        <div className="absolute inset-0 pointer-events-none">
           <AnimatedShaderBackground />
         </div>
 
         {/* Sticky Nav */}
-        <nav className="sticky top-0 z-30 flex items-center justify-between px-6 md:px-12 py-4 backdrop-blur-sm bg-white/70">
+        <nav className="sticky top-0 z-30 flex items-center justify-between px-6 md:px-12 py-4 backdrop-blur-sm bg-black/30">
           <img
             src={nextgenLogo}
             alt="NextGen Logo"
