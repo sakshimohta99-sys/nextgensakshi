@@ -105,15 +105,15 @@ const Index = () => {
         {/* Main CTA content */}
         <div className="relative z-20 flex min-h-[calc(100vh-72px)] flex-col items-center justify-center px-6 text-center">
           {/* Badge */}
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-5 py-2">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-5 py-2">
             <Rocket size={16} className="text-primary" />
-            <span className="text-sm font-medium text-primary font-montserrat">
+            <span className="text-sm font-medium text-primary-foreground font-montserrat">
               Are You Ready to Become AI-Powered?
             </span>
           </div>
 
           {/* Headline */}
-          <h1 className="mb-8 text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight font-montserrat text-foreground">
+          <h1 className="mb-8 text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight font-montserrat text-white">
             Make Your Company/Organization
             <br />
             AI-First
@@ -124,7 +124,7 @@ const Index = () => {
             href="https://calendly.com/sakshi-mohta99"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center rounded-full border-2 border-foreground bg-foreground px-8 py-4 text-base md:text-lg font-semibold text-background transition-all hover:bg-transparent hover:text-foreground font-montserrat"
+            className="group inline-flex items-center rounded-full border-2 border-white bg-white px-8 py-4 text-base md:text-lg font-semibold text-foreground transition-all hover:bg-transparent hover:text-white font-montserrat"
           >
             Book Your Meeting
             <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
