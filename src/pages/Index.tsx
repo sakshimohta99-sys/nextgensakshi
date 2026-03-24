@@ -60,7 +60,7 @@ const Index = () => {
               letterSpacing: "0.18em",
             }}
           >
-            The one thing more dangerous than AI is someone using it
+            The one thing more dangerous than AI is someone who is using it
           </p>
         </div>
 
