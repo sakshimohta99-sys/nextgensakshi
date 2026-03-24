@@ -184,3 +184,28 @@
     --glow-angle: 360deg;
   }
 }
+
+/* Marquee scroll */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Travelling dotted line */
+@keyframes dash-travel {
+  to { stroke-dashoffset: -20; }
+}
+
+.animate-dash {
+  animation: dash-travel 1.4s linear infinite;
+}
