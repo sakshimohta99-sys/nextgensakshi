@@ -233,7 +233,7 @@ const Index = () => {
         id="social-proof"
         className="relative overflow-hidden"
         style={{
-          background: "linear-gradient(180deg, #F5F0FF 0%, #FFFFFF 7%, #FFFFFF 100%)",
+          background: "linear-gradient(180deg, #EDE5FF 0%, #F5F0FF 20%, #FAF7FF 60%, #FFFFFF 100%)",
         }}
       >
         {/* Sticky Nav */}
