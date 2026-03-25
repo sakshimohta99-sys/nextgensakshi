@@ -548,13 +548,13 @@ const Index = () => {
 
             {/* RIGHT: Photo + LinkedIn */}
             <div className="w-full md:w-[40%] flex flex-col items-center md:items-start gap-4 order-first md:order-last">
-              {/* Placeholder portrait */}
-              <div
-                className="w-full rounded-2xl bg-gradient-to-br from-[#EDE5FF] to-[#D8CCFF] flex items-center justify-center"
-                style={{ aspectRatio: "3/4", maxWidth: "340px" }}
-              >
-                <span className="font-montserrat text-[#7555C0] text-sm font-medium opacity-60">Photo coming soon</span>
-              </div>
+              {/* Founders photo */}
+              <img
+                src="/src/assets/founders.jpeg"
+                alt="Sakshi Mohta and Yashvi Bhaia, Co-Founders of NextGen"
+                className="w-full rounded-2xl object-cover shadow-lg"
+                style={{ maxWidth: "340px", aspectRatio: "3/4" }}
+              />
               {/* LinkedIn icon */}
               <a
                 href="https://www.linkedin.com/in/sakshi-mohta/"
