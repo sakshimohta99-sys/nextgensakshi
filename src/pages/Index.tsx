@@ -553,7 +553,7 @@ const Index = () => {
                 src="/src/assets/founders.jpeg"
                 alt="Sakshi Mohta and Yashvi Bhaia, Co-Founders of NextGen"
                 className="w-full rounded-2xl object-cover shadow-lg"
-                style={{ maxWidth: "340px", aspectRatio: "3/4" }}
+                style={{ maxWidth: "460px", aspectRatio: "3/4" }}
               />
               {/* LinkedIn icon */}
               <a
@@ -573,7 +573,7 @@ const Index = () => {
       </section>
 
       {/* ===== SECTION 6: CONTACT + FOOTER ===== */}
-      <section className="bg-[#1a1a1a]">
+      <section style={{ background: "linear-gradient(160deg, #1C0A4A 0%, #2D1569 40%, #3B1F82 100%)" }}>
         <div className="max-w-6xl mx-auto px-6 py-20">
           <div className="flex flex-col md:flex-row gap-12 md:gap-16">
 
