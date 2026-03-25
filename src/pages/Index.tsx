@@ -305,12 +305,8 @@ const Index = () => {
         </div>
 
         {/* ── Section Divider ── */}
-        <div className="flex flex-col items-center gap-3 py-10">
-          <div style={{ width: "320px", height: "1.5px", background: "linear-gradient(90deg, transparent, #7555C0, transparent)" }} />
-          <span className="font-montserrat font-semibold tracking-[0.25em] text-[#7555C0] uppercase" style={{ fontSize: "12px" }}>
-            — How It Works —
-          </span>
-          <div style={{ width: "320px", height: "1.5px", background: "linear-gradient(90deg, transparent, #7555C0, transparent)" }} />
+        <div className="flex justify-center py-10">
+          <div style={{ width: "400px", height: "1.5px", background: "linear-gradient(90deg, transparent, #7555C0, transparent)" }} />
         </div>
 
         {/* ── PART B: How It Works ── */}
