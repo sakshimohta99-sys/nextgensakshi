@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import AnimatedShaderBackground from "@/components/ui/animated-shader-background";
 import nextgenLogo from "@/assets/nextgen-logo.png";
 import { ChevronDown, Rocket, Mail } from "lucide-react";
@@ -57,9 +57,25 @@ const courses = [
   },
 ];
 
+const animateCount = (target: number, setter: (n: number) => void, duration: number) => {
+  const start = performance.now();
+  const tick = (now: number) => {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    setter(Math.round(eased * target));
+    if (progress < 1) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+};
+
 const Index = () => {
   const [showTagline, setShowTagline] = useState(false);
   const [showChevron, setShowChevron] = useState(false);
+  const [stat1, setStat1] = useState(0);
+  const [stat2, setStat2] = useState(0);
+  const statsRef = useRef<HTMLDivElement>(null);
+  const statsAnimated = useRef(false);
 
   useEffect(() => {
     const taglineTimer = setTimeout(() => setShowTagline(true), 3000);
@@ -68,6 +84,23 @@ const Index = () => {
       clearTimeout(taglineTimer);
       clearTimeout(chevronTimer);
     };
+  }, []);
+
+  useEffect(() => {
+    const el = statsRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !statsAnimated.current) {
+          statsAnimated.current = true;
+          animateCount(525, setStat1, 1800);
+          animateCount(60, setStat2, 1400);
+        }
+      },
+      { threshold: 0.3 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -193,7 +226,7 @@ const Index = () => {
         </nav>
 
         {/* Courses content */}
-        <div className="flex min-h-[calc(100vh-72px)] flex-col items-center justify-center px-6 py-16">
+        <div className="flex flex-col items-center px-6 py-20">
           <h2 className="mb-16 text-3xl md:text-5xl font-bold text-foreground font-montserrat text-center">
             Our Services
           </h2>
@@ -445,6 +478,29 @@ const Index = () => {
             >
               Book Your Meeting →
             </a>
+          </div>
+        </div>
+
+        {/* ── STATS COUNTER ── */}
+        <div
+          ref={statsRef}
+          className="py-20 px-6 flex flex-col sm:flex-row items-center justify-center gap-16 sm:gap-32"
+        >
+          <div className="flex flex-col items-center">
+            <span className="font-montserrat font-bold text-[#7555C0]" style={{ fontSize: "clamp(48px, 6vw, 64px)" }}>
+              {stat1}+
+            </span>
+            <span className="font-montserrat font-normal text-[#6B7280] mt-2" style={{ fontSize: "18px" }}>
+              Professionals Trained
+            </span>
+          </div>
+          <div className="flex flex-col items-center">
+            <span className="font-montserrat font-bold text-[#7555C0]" style={{ fontSize: "clamp(48px, 6vw, 64px)" }}>
+              {stat2}+
+            </span>
+            <span className="font-montserrat font-normal text-[#6B7280] mt-2" style={{ fontSize: "18px" }}>
+              Workshops Delivered
+            </span>
           </div>
         </div>
       </section>
