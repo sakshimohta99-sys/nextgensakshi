@@ -573,7 +573,7 @@ const Index = () => {
       </section>
 
       {/* ===== SECTION 6: CONTACT + FOOTER ===== */}
-      <section style={{ background: "#4A2C9E" }}>
+      <section className="relative z-10 overflow-hidden" style={{ background: "#4A2C9E" }}>
         <div className="max-w-6xl mx-auto px-6 py-20">
           <div className="flex flex-col md:flex-row gap-12 md:gap-16">
 
