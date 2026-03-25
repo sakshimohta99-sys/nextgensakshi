@@ -72,6 +72,8 @@ const animateCount = (target: number, setter: (n: number) => void, duration: num
 const Index = () => {
   const [showTagline, setShowTagline] = useState(false);
   const [showChevron, setShowChevron] = useState(false);
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
+  const [formSent, setFormSent] = useState(false);
   const [stat1, setStat1] = useState(0);
   const [stat2, setStat2] = useState(0);
   const statsRef = useRef<HTMLDivElement>(null);
@@ -502,6 +504,166 @@ const Index = () => {
               Workshops Delivered
             </span>
           </div>
+        </div>
+      </section>
+
+      {/* ===== SECTION 5: KNOW YOUR TRAINERS ===== */}
+      <section
+        className="relative overflow-hidden"
+        style={{ background: "linear-gradient(180deg, #F5F0FF 0%, #FFFFFF 30%, #FFFFFF 100%)" }}
+      >
+        <div className="max-w-6xl mx-auto px-6 py-20">
+          <h2
+            className="text-center font-montserrat font-bold text-[#1a1a1a] mb-16"
+            style={{ fontSize: "clamp(28px, 4vw, 48px)" }}
+          >
+            Know Your Trainers
+          </h2>
+
+          <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-start">
+            {/* LEFT: Bios */}
+            <div className="w-full md:w-[60%] flex flex-col gap-10">
+              {/* Bio 1 */}
+              <div>
+                <h3 className="font-montserrat font-bold text-[#1a1a1a] mb-1" style={{ fontSize: "24px" }}>Sakshi Mohta</h3>
+                <p className="font-montserrat font-normal text-[#7555C0] mb-4" style={{ fontSize: "16px" }}>Co-Founder</p>
+                <p className="font-montserrat font-normal text-[#4B5563]" style={{ fontSize: "16px", lineHeight: "1.7" }}>
+                  Sakshi brings a business-first perspective to AI, shaped by her experience at PwC India and a background in marketing, branding, and operations. A B.Com (Hons) graduate from St. Xavier's College, Kolkata, she further honed her strategic thinking through the Executive Education Leadership Development Programme at the Indian School of Business.
+                  <br /><br />
+                  She focuses on one thing: making AI a practical, everyday tool for teams — not a buzzword. Driven by a mission to make AI accessible for every Indian organization, she's building NextGen to bridge the gap between AI's potential and real-world adoption.
+                </p>
+              </div>
+
+              {/* Bio 2 */}
+              <div>
+                <h3 className="font-montserrat font-bold text-[#1a1a1a] mb-1" style={{ fontSize: "24px" }}>Yashvi Bhaia</h3>
+                <p className="font-montserrat font-normal text-[#7555C0] mb-4" style={{ fontSize: "16px" }}>Co-Founder</p>
+                <p className="font-montserrat font-normal text-[#4B5563]" style={{ fontSize: "16px", lineHeight: "1.7" }}>
+                  Yashvi brings a rare combination to AI training — a deep understanding of how people learn, paired with a sharp instinct for communication. With a double major in Psychology and English Literature, she approaches training design with a focus on clarity, engagement, and real retention.
+                  <br /><br />
+                  As a content strategist, she's helped build LinkedIn audiences of 250,000+ followers and grown her own Instagram community of 27,000+. At NextGen, she ensures every workshop isn't just informative — it's designed to make AI stick. From curriculum structure to delivery flow, she's the reason teams walk out confident, not confused.
+                </p>
+              </div>
+            </div>
+
+            {/* RIGHT: Photo + LinkedIn */}
+            <div className="w-full md:w-[40%] flex flex-col items-center md:items-start gap-4 order-first md:order-last">
+              {/* Placeholder portrait */}
+              <div
+                className="w-full rounded-2xl bg-gradient-to-br from-[#EDE5FF] to-[#D8CCFF] flex items-center justify-center"
+                style={{ aspectRatio: "3/4", maxWidth: "340px" }}
+              >
+                <span className="font-montserrat text-[#7555C0] text-sm font-medium opacity-60">Photo coming soon</span>
+              </div>
+              {/* LinkedIn icon */}
+              <a
+                href="https://www.linkedin.com/in/sakshi-mohta/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-9 h-9 rounded-md bg-[#7555C0] hover:bg-[#8a68d4] transition-colors"
+                aria-label="LinkedIn"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.447 20.452H17.21v-5.569c0-1.327-.024-3.036-1.851-3.036-1.853 0-2.136 1.446-2.136 2.94v5.665H9.988V9h3.112v1.561h.044c.434-.823 1.494-1.69 3.075-1.69 3.289 0 3.896 2.165 3.896 4.979v6.602zM5.337 7.433a1.8 1.8 0 1 1 0-3.601 1.8 1.8 0 0 1 0 3.601zM6.958 20.452H3.714V9h3.244v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== SECTION 6: CONTACT + FOOTER ===== */}
+      <section className="bg-[#1a1a1a]">
+        <div className="max-w-6xl mx-auto px-6 py-20">
+          <div className="flex flex-col md:flex-row gap-12 md:gap-16">
+
+            {/* LEFT: Contact Form */}
+            <div className="w-full md:w-1/2">
+              <h2 className="font-montserrat font-bold text-white mb-2" style={{ fontSize: "clamp(24px, 3vw, 32px)" }}>
+                Get In Touch
+              </h2>
+              <p className="font-montserrat font-normal text-[#9CA3AF] mb-8" style={{ fontSize: "16px" }}>
+                Have questions? We'd love to hear from you.
+              </p>
+
+              {formSent ? (
+                <div className="rounded-xl bg-[#7555C0]/20 border border-[#7555C0]/40 px-6 py-8 text-center">
+                  <p className="font-montserrat font-semibold text-white text-lg">Thanks! We'll get back to you soon.</p>
+                </div>
+              ) : (
+                <form
+                  className="flex flex-col gap-4"
+                  onSubmit={(e) => { e.preventDefault(); setFormSent(true); }}
+                >
+                  {[
+                    { key: "name", type: "text", placeholder: "Your Name" },
+                    { key: "email", type: "email", placeholder: "Your Email" },
+                    { key: "phone", type: "tel", placeholder: "Your Phone Number" },
+                  ].map(({ key, type, placeholder }) => (
+                    <input
+                      key={key}
+                      type={type}
+                      placeholder={placeholder}
+                      value={formData[key as keyof typeof formData]}
+                      onChange={(e) => setFormData({ ...formData, [key]: e.target.value })}
+                      className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 font-montserrat text-white placeholder-[#6B7280] text-sm focus:outline-none focus:border-[#7555C0] transition-colors"
+                      required={key !== "phone"}
+                    />
+                  ))}
+                  <textarea
+                    placeholder="Tell us what you're looking for..."
+                    rows={4}
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 font-montserrat text-white placeholder-[#6B7280] text-sm focus:outline-none focus:border-[#7555C0] transition-colors resize-none"
+                  />
+                  <button
+                    type="submit"
+                    className="w-full rounded-full bg-[#7555C0] py-3.5 font-montserrat font-semibold text-white text-sm hover:bg-[#8a68d4] transition-colors"
+                  >
+                    Send Message →
+                  </button>
+                </form>
+              )}
+            </div>
+
+            {/* RIGHT: Contact Details */}
+            <div className="w-full md:w-1/2">
+              <h2 className="font-montserrat font-bold text-white mb-8" style={{ fontSize: "clamp(20px, 2.5vw, 24px)" }}>
+                Contact Us
+              </h2>
+              <div className="flex flex-col gap-5">
+                <a href="mailto:hello.thenextgen@gmail.com" className="flex items-start gap-3 group">
+                  <svg className="mt-0.5 shrink-0 text-[#7555C0]" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span className="font-montserrat text-[#9CA3AF] text-sm group-hover:text-white transition-colors">hello.thenextgen@gmail.com</span>
+                </a>
+                <a href="tel:+919830326808" className="flex items-start gap-3 group">
+                  <svg className="mt-0.5 shrink-0 text-[#7555C0]" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span className="font-montserrat text-[#9CA3AF] text-sm group-hover:text-white transition-colors">+91 9830326808</span>
+                </a>
+                <div className="flex items-start gap-3">
+                  <svg className="mt-0.5 shrink-0 text-[#7555C0]" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span className="font-montserrat text-[#9CA3AF] text-sm">2nd Floor, 238B, Acharya Jagdish Chandra Bose Road, Kolkata 700020</span>
+                </div>
+              </div>
+
+              <a
+                href="https://calendly.com/sakshi-mohta99"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-10 inline-block rounded-full border border-[#7555C0] px-7 py-3 font-montserrat font-semibold text-[#7555C0] text-sm hover:bg-[#7555C0] hover:text-white transition-all"
+              >
+                Book a Meeting →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer bar */}
+        <div className="border-t border-white/10 py-5 px-6 text-center">
+          <p className="font-montserrat font-normal text-[#6B7280]" style={{ fontSize: "14px" }}>
+            © 2026 NextGen. All rights reserved.
+          </p>
         </div>
       </section>
     </div>
