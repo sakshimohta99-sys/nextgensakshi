@@ -573,7 +573,7 @@ const Index = () => {
       </section>
 
       {/* ===== SECTION 6: CONTACT + FOOTER ===== */}
-      <section style={{ background: "linear-gradient(160deg, #1C0A4A 0%, #2D1569 40%, #3B1F82 100%)" }}>
+      <section style={{ background: "#4A2C9E" }}>
         <div className="max-w-6xl mx-auto px-6 py-20">
           <div className="flex flex-col md:flex-row gap-12 md:gap-16">
 
