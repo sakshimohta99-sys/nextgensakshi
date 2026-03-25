@@ -304,11 +304,20 @@ const Index = () => {
           </div>
         </div>
 
+        {/* ── Section Divider ── */}
+        <div className="flex flex-col items-center gap-3 py-10">
+          <div style={{ width: "320px", height: "1.5px", background: "linear-gradient(90deg, transparent, #7555C0, transparent)" }} />
+          <span className="font-montserrat font-semibold tracking-[0.25em] text-[#7555C0] uppercase" style={{ fontSize: "12px" }}>
+            — How It Works —
+          </span>
+          <div style={{ width: "320px", height: "1.5px", background: "linear-gradient(90deg, transparent, #7555C0, transparent)" }} />
+        </div>
+
         {/* ── PART B: How It Works ── */}
-        <div className="py-20 px-6">
+        <div className="py-10 px-6">
           <h2
-            className="text-center font-montserrat font-bold text-[#1a1a1a] mb-20"
-            style={{ fontSize: "clamp(30px, 4.5vw, 48px)" }}
+            className="text-center font-montserrat font-bold text-[#1a1a1a] mb-12"
+            style={{ fontSize: "clamp(28px, 4vw, 42px)" }}
           >
             How It Works
           </h2>
@@ -317,17 +326,17 @@ const Index = () => {
           <div className="max-w-4xl mx-auto hidden md:block">
             {/* Step 1 – left */}
             <div className="flex justify-start">
-              <div className="w-5/12 bg-white rounded-2xl shadow-md p-8">
-                <span className="block text-5xl font-bold text-[#7555C0] font-montserrat mb-3">01</span>
-                <h3 className="text-xl font-semibold text-[#1a1a1a] font-montserrat mb-3">Let's Talk AI</h3>
-                <p className="text-[#6B7280] font-montserrat text-base leading-relaxed">
+              <div className="w-5/12 bg-white rounded-2xl shadow-md p-6">
+                <span className="block text-4xl font-bold text-[#7555C0] font-montserrat mb-2">01</span>
+                <h3 className="text-lg font-semibold text-[#1a1a1a] font-montserrat mb-2">Let's Talk AI</h3>
+                <p className="text-[#6B7280] font-montserrat text-sm leading-relaxed">
                   A quick call to understand your team, your goals, and where AI fits in.
                 </p>
               </div>
             </div>
 
             {/* Connector 1: down → right */}
-            <div className="relative h-24 w-full">
+            <div className="relative h-16 w-full">
               <svg
                 className="absolute inset-0 w-full h-full"
                 viewBox="0 0 100 24"
@@ -348,17 +357,17 @@ const Index = () => {
 
             {/* Step 2 – right */}
             <div className="flex justify-end">
-              <div className="w-5/12 bg-white rounded-2xl shadow-md p-8">
-                <span className="block text-5xl font-bold text-[#7555C0] font-montserrat mb-3">02</span>
-                <h3 className="text-xl font-semibold text-[#1a1a1a] font-montserrat mb-3">Find Your Fit</h3>
-                <p className="text-[#6B7280] font-montserrat text-base leading-relaxed">
+              <div className="w-5/12 bg-white rounded-2xl shadow-md p-6">
+                <span className="block text-4xl font-bold text-[#7555C0] font-montserrat mb-2">02</span>
+                <h3 className="text-lg font-semibold text-[#1a1a1a] font-montserrat mb-2">Find Your Fit</h3>
+                <p className="text-[#6B7280] font-montserrat text-sm leading-relaxed">
                   We match you with the right program — no fluff, just what your team actually needs.
                 </p>
               </div>
             </div>
 
             {/* Connector 2: down → left */}
-            <div className="relative h-24 w-full">
+            <div className="relative h-16 w-full">
               <svg
                 className="absolute inset-0 w-full h-full"
                 viewBox="0 0 100 24"
@@ -380,10 +389,10 @@ const Index = () => {
 
             {/* Step 3 – left */}
             <div className="flex justify-start">
-              <div className="w-5/12 bg-white rounded-2xl shadow-md p-8">
-                <span className="block text-5xl font-bold text-[#7555C0] font-montserrat mb-3">03</span>
-                <h3 className="text-xl font-semibold text-[#1a1a1a] font-montserrat mb-3">Watch Your Team Level Up</h3>
-                <p className="text-[#6B7280] font-montserrat text-base leading-relaxed">
+              <div className="w-5/12 bg-white rounded-2xl shadow-md p-6">
+                <span className="block text-4xl font-bold text-[#7555C0] font-montserrat mb-2">03</span>
+                <h3 className="text-lg font-semibold text-[#1a1a1a] font-montserrat mb-2">Watch Your Team Level Up</h3>
+                <p className="text-[#6B7280] font-montserrat text-sm leading-relaxed">
                   Live, hands-on workshops. Your team walks out using AI from day one.
                 </p>
               </div>
